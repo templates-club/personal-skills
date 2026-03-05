@@ -1,0 +1,17 @@
+{
+    "name": "pkc918-skills",
+    "owner": {
+      "name": "青椒肉丝"
+    },
+    "plugins": [
+      {
+        "name": "generating-skill",
+        "source": "./",
+        "description": "Generate a skill for Claude Code Marketplace",
+        "keywords": ["generate", "skill", "claude code marketplace"],
+        "skills": [
+          "./skills/generating-skill"
+        ]
+      }
+    ]
+  }
