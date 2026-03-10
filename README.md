@@ -45,31 +45,15 @@ Synced from external repositories that maintain their own skills. Configure in `
 |-------|-------------|--------|
 | *(Add vendor entries in meta.ts, run pnpm init and pnpm sync)* | | |
 
-## FAQ
-
-### What Makes This Collection Different?
-
-This project uses git submodules to directly reference source documentation and existing skill repos. That provides reliable context and lets skills stay up-to-date with upstream over time.
-
-The layout is flexible: you can use it as a template to build your own skill collection. See [AGENTS.md](AGENTS.md) for workflows and file formats.
-
-### Skills vs llms.txt vs AGENTS.md
-
-The value of skills is being **shareable** and **on-demand**. Shareable prompts are easier to manage and reuse across projects. On-demand means skills can be pulled in when needed, beyond what fits in one agent context.
-
-AGENTS.md loads everything upfront so agents always see it; skills can have false negatives when the agent doesn’t pull them. Skills are a standardized format for agents—plain markdown. If you want certain skills to always apply, reference them in your AGENTS.md.
-
 ## Generate Your Own Skills
 
-Fork or clone this repository to create your own collection.
+Use this repository as a template to create your own skill collection.
 
-1. Fork or clone this repository
-2. Install dependencies: `pnpm install`
-3. Update `meta.ts` with your projects and skill sources (submodules and/or vendors)
-4. Run `pnpm cleanup` to remove existing submodules and skills (optional, if reusing the template)
-5. Run `pnpm init` to clone the submodules into `sources/` and `vendor/`
-6. Run `pnpm sync` to sync vendored skills into `skills/`
-7. For generated skills (Type 1), ask your agent to generate skills from `sources/{project}/docs/` (recommended one project at a time)
+1. **Use this template** — On GitHub, click "Use this template" to create a new repo from this template
+2. **Install** — `pnpm install`
+3. **Configure** — Update `meta.ts` and `.gitmodules` with your projects and skill sources (submodules and/or vendors)
+4. **Generate** — Run `pnpm start` to clone submodules, sync vendored skills, and generate your own repository
+5. **Add your own skills** — Place any hand-written or custom output skills in the `skills/` folder
 
 See [AGENTS.md](AGENTS.md) for detailed generation guidelines.
 
