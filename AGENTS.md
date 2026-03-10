@@ -202,5 +202,5 @@ When generating skills (Type 1 only):
 6. **Explain why** - Not just how to use, but when and why
 
 ## Supported Projects
-
+   
 See `meta.ts` for the canonical list of projects and their repository URLs.
