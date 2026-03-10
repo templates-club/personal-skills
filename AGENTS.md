@@ -32,34 +32,6 @@ For projects that **already maintain their own skills**. We clone their repo as 
 
 For skills that are written manually with project preferences, experience, and best practices. Listed in `meta.ts` under `manual`. You don't need to do anything about them unless being asked.
 
-## Repository Structure
-
-```
-.
-├── meta.ts                     # Project metadata (repos & URLs)
-├── instructions/               # Instructions for generating skills
-│   └── {project}.md            # Instructions for generating skills for {project}
-│
-├── sources/                    # Type 1: OSS repos (generate from docs)
-│   └── {project}/
-│       └── docs/               # Read documentation from here
-│
-├── vendor/                     # Type 2: Projects with existing skills (sync only)
-│   └── {project}/
-│       └── skills/
-│           └── {skill-name}/   # Individual skills to sync
-│
-└── skills/                     # Output directory (generated or synced)
-    └── {output-name}/
-        ├── SKILL.md            # Index of all skills
-        ├── GENERATION.md       # Tracking metadata (for generated skills)
-        ├── SYNC.md             # Tracking metadata (for synced skills)
-        └── references/
-            └── *.md            # Individual skill files
-```
-
-**Important:** For Type 1 (generated), the `skills/{project}/` name must match `sources/{project}/`. For Type 2 (synced), the output name is configured in `meta.ts` and may differ from the source skill name.
-
 ## Workflows
 
 ### For Generated Skills (Type 1)
